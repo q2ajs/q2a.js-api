@@ -1,0 +1,7 @@
+/node_modules
+/.ideac
+/.idea
+/.env
+/coverage
+.env
+yarn-error.log

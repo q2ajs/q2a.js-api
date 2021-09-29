@@ -1,0 +1,55 @@
+const TABLES = {
+  USER_TABLE: 'user',
+  POST_TABLE: 'post',
+  BLOG_POST_TABLE: 'blogpost',
+  TAG_TABLE: 'tag',
+  CLAP_TABLE: 'clap',
+  NOTIFICATION_TABLE: 'notification',
+  Medal_TABLE: 'medal',
+  POST_TAG_TABLE: 'posttag',
+  STATISTICS_TABLE: 'statistic',
+  SITE_INFORMATION: 'siteInformation',
+};
+const BLOG_POST_TYPES = {
+  POST: 'POST',
+  COMMENT: 'COMMENT',
+};
+const POST_TYPES = {
+  ANSWER: 'ANSWER',
+  QUESTION: 'QUESTION',
+  COMMENT: 'COMMENT',
+};
+
+const STATUS_CODE = {
+  VALIDATION_ERROR: 'VALIDATION_ERROR',
+  SUCCESS: 'SUCCESS',
+  OTHER_ERROR: 'OTHER_ERROR',
+  INPUT_ERROR: 'INPUT_ERROR',
+  AUTHORIZATION_ERROR: 'AUTHORIZATION_ERROR',
+};
+
+const LOGIN_ERRORS = {
+  NO_USER: 'NO_USER',
+  ADMIN_EXIST: 'Admin already Exit',
+  EXIST_USER: 'Username already Exist',
+  INVALID_LOGIN: 'INVALID_LOGIN',
+  EMAIL_EXIST: 'Email already Exist',
+  GOOGLE_LOGIN_ERROR: 'GOOGLE_LOGIN_ERROR',
+};
+
+const LANGUAGE = {
+  PERSIAN: 'fa',
+  ENGLISH: 'en',
+};
+
+const THEME = {
+  LIGHT: 'light',
+  DARK: 'dark',
+};
+const ROLE = {
+  USER_CONFIRMED: 'USER_CONFIRMED',
+  USER_NOT_CONFIRMED: 'USER_NOT_CONFIRMED',
+  ADMIN: 'ADMIN',
+  SUPER_ADMIN: 'SUPER_ADMIN',
+};
+export { TABLES, POST_TYPES, STATUS_CODE, LOGIN_ERRORS, LANGUAGE, THEME, BLOG_POST_TYPES, ROLE };
