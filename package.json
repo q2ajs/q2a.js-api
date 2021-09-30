@@ -48,7 +48,8 @@
     "jest": "^27.1.0",
     "jscpd": "^3.3.26",
     "prettier": "^2.3.2",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+	"husky": "^7.0.2"
   },
   "scripts": {
     "dev": "nodemon src/server.js",
