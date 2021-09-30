@@ -48,8 +48,7 @@
     "jest": "^27.1.0",
     "jscpd": "^3.3.26",
     "prettier": "^2.3.2",
-    "sqlite3": "^5.0.2",
-	"husky": "^6.0.0"
+    "sqlite3": "^5.0.2"
   },
   "scripts": {
     "dev": "nodemon src/server.js",
@@ -57,7 +56,8 @@
     "setup": "node src/setup/index.js",
     "converter": "nodemon src/tableUpgrade.js",
     "test": "./node_modules/.bin/jest --coverage",
-    "lint": "./node_modules/.bin/eslint --fix src/**/*.js src/**/*.test.js --no-error-on-unmatched-pattern"
+    "lint": "./node_modules/.bin/eslint --fix src/**/*.js src/**/*.test.js --no-error-on-unmatched-pattern",
+    "prepare": "husky install"
   },
   "prettier": {
     "tabWidth": 2,
