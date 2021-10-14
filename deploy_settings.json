@@ -1,0 +1,86 @@
+{
+  "MYSQL_HOST": {
+    "Question": "Enter your mysql host ? ",
+    "defaultValue": "127.0.0.1",
+    "validationRegex": "",
+    "type": "ip"
+  },
+  "MYSQL_USER": {
+    "Question": "Enter your mysql user ? ",
+    "defaultValue": "root",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "MYSQL_PASSWORD": {
+    "Question": "Enter your mysql password ? ",
+    "defaultValue": "",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "MYSQL_DATABASE": {
+    "Question": "Enter your mysql database ? ",
+    "defaultValue": "q2a",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "MYSQL_PORT": {
+    "Question": "Enter your mysql port ? ",
+    "defaultValue": "3306",
+    "validationRegex": "",
+    "type": "integer"
+  },
+  "SUPER_ADMIN_USERNAME": {
+    "Question": "Enter your super admin username ? ",
+    "defaultValue": "YOUR_SUPER_ADMIN_USERNAME",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "SUPER_ADMIN_PASSWORD": {
+    "Question": "Enter your super admin password ? ",
+    "defaultValue": "YOUR_SUPER_ADMIN_PASSWORD",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "SUPER_ADMIN_EMAIL": {
+    "Question": "Enter your super admin email ? ",
+    "defaultValue": "",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "JWT_SECRET": {
+    "Question": "Enter your jwt secret ( random string ) ? ",
+    "defaultValue": "SOME_RANDOM_STRING",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "JWT_EXPIRE_TIME": {
+    "Question": "Enter your jwt expire time ? ",
+    "defaultValue": "60 * 60 * 24 * 7",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "S3_ACCESS_KEY_ID": {
+    "Question": "Enter your s3 access key ? ",
+    "defaultValue": "...",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "S3_SECRET_ACCESS_KEY": {
+    "Question": "Enter your s3 secret access key ? ",
+    "defaultValue": "...",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "S3_ENDPOINT": {
+    "Question": "Enter your s3 endpoint ? ",
+    "defaultValue": "...",
+    "validationRegex": "",
+    "type": "string"
+  },
+  "S3_BUCKET": {
+    "Question": "Enter your s3 bucket ? ",
+    "defaultValue": "...",
+    "validationRegex": "",
+    "type": "string"
+  }
+}
