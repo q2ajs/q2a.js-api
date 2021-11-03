@@ -1,11 +1,4 @@
 {
-  "MYSQL_HOST": {
-    "question": "Enter your mysql host ? ",
-    "defaultValue": "localhost",
-    "validationRegex": ".{3,}",
-    "type": "ip",
-    "getFromInput": "true"
-  },
   "MYSQL_USER": {
     "question": "Enter your mysql user ? ",
     "defaultValue": "root",
