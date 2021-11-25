@@ -4,14 +4,14 @@
     "defaultValue": "root",
     "validationRegex": ".{3,}",
     "type": "string",
-    "getFromInput": "true"
+    "getFromInput": "false"
   },
   "MYSQL_PASSWORD": {
     "question": "Enter your mysql password ? ",
     "defaultValue": "",
     "validationRegex": ".{5,}",
     "type": "string",
-    "getFromInput": "true"
+    "getFromInput": "false"
   },
   "MYSQL_DATABASE": {
     "question": "Enter your mysql database ? ",
