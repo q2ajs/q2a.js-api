@@ -25,7 +25,7 @@
     "defaultValue": "3306",
     "validationRegex": "^\\d+$",
     "type": "integer",
-    "getFromInput": "true"
+    "getFromInput": "false"
   },
   "SUPER_ADMIN_USERNAME": {
     "question": "Enter your super admin username ? ",
