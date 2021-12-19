@@ -5,3 +5,5 @@
 /coverage
 .env
 yarn-error.log
+*.xlsx
+*.csv
