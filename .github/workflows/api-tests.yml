@@ -1,0 +1,27 @@
+name: Run API tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Create .env file
+        run: echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> ./.env
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.17.6'
+      - name: Run tests
+        run: yarn install --production --frozen-lockfile && yarn test

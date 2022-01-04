@@ -8,10 +8,10 @@ import { getUsersData } from './data.js';
 createDatabasePromise.then(async () => {
   const importDb = async () => {
     const importer = new Importer({
-      host: process.env.HOST,
-      user: process.env.USER,
-      password: process.env.PASSWORD,
-      database: process.env.DATABASE,
+      host: process.env.MYSQL_HOST,
+      user: process.env.MYSQL_USER,
+      password: process.env.MYSQL_PASSWORD,
+      database: process.env.MYSQL_DATABASE,
     });
 
     // New onProgress method, added in version 5.0!
