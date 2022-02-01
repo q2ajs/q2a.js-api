@@ -1313,43 +1313,43 @@
   resolved "https://registry.yarnpkg.com/@josephg/resolvable/-/resolvable-1.0.0.tgz#cd75b09cfad18cd945de9221d403203aa07e3d0a"
   integrity sha512-OfTtjoqB2doov5aTJxkyAMK8dXoo7CjCUQSYUEtiY34jbWduOGV7+168tmCT8COMsUEd5DMSFg/0iAOPCBTNAQ==
 
-"@jscpd/core@^3.3.17":
-  version "3.3.17"
-  resolved "https://registry.yarnpkg.com/@jscpd/core/-/core-3.3.17.tgz#c9850df97738a281aa8cce94349609d90d442619"
-  integrity sha512-bE2sRVhfdWCeqHFeYW1fxDEahpkUH2/SAiuFBMmZ9+kdsbNZ7w0Ks5n3NU1Gkaqy725g/G6w+PdxVRdQ7qkf2A==
+"@jscpd/core@^3.4.5":
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/@jscpd/core/-/core-3.4.5.tgz#86e8fde9341b716f1f2744291b13c796d836489b"
+  integrity sha512-02Ajnj07VykiwdWNoMKGdQDHT76kJGOvc1h9+aoicU0CeacWIEuoJW6Gy+N3j+UGUlc1ndWhZ91alIiQ8ERMGg==
   dependencies:
     eventemitter3 "^4.0.4"
 
-"@jscpd/finder@^3.3.26":
-  version "3.3.26"
-  resolved "https://registry.yarnpkg.com/@jscpd/finder/-/finder-3.3.26.tgz#92441904824b6b62fc9ef85d797e1b930efc782d"
-  integrity sha512-FGWIIhLELpeD2tkVjn+8QKnzX3nLAXkkcGTo+qWzEaqxvHsIGgeaP+TT3gHZM1Xm5eg6pb4j23nLY0h4UwEw0w==
+"@jscpd/finder@^3.4.5":
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/@jscpd/finder/-/finder-3.4.5.tgz#ba2d4c78e026a5fbba640608261355fb630a5718"
+  integrity sha512-Hz8s6UVbtETYmDP+MdjaTaKKgXsb+SR1dJcdwluBTm5ZNkE9cE/dnDVnrEcKGhE7N3Mg6HEo/fTIKqBsvbRZlw==
   dependencies:
-    "@jscpd/core" "^3.3.17"
-    "@jscpd/tokenizer" "^3.3.24"
+    "@jscpd/core" "^3.4.5"
+    "@jscpd/tokenizer" "^3.4.5"
     blamer "^1.0.1"
     bytes "^3.1.0"
     cli-table3 "^0.6.0"
-    colors "^1.4.0"
+    colors "1.4.0"
     fast-glob "^3.2.2"
     fs-extra "^9.0.0"
     markdown-table "^2.0.0"
     pug "^3.0.1"
 
-"@jscpd/html-reporter@^3.3.26":
-  version "3.3.26"
-  resolved "https://registry.yarnpkg.com/@jscpd/html-reporter/-/html-reporter-3.3.26.tgz#e662ddb250ca480e837a80828871a87ced04d14e"
-  integrity sha512-Ijpy6aW951P5NKZUYM+PTcNcqJGQx1+D+TU3HPRaOEGQfiD9i3pz/0VFs6oOVTuQBwWJSp4ojhaWfHo9GS45dg==
+"@jscpd/html-reporter@^3.4.5":
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/@jscpd/html-reporter/-/html-reporter-3.4.5.tgz#0d501dc3b46df5e54dc4adc1d84e660105b8d0e8"
+  integrity sha512-N1W97Xfz2xFDmi5UlYfplGOxz0oLNCvOVD5wYfe1v9WC7BYV1LrDNRWfJzadCefa1XGLsxvMDtLjnhIpFInpUg==
   dependencies:
-    colors "^1.4.0"
+    colors "1.4.0"
     fs-extra "^9.0.1"
 
-"@jscpd/tokenizer@^3.3.24":
-  version "3.3.24"
-  resolved "https://registry.yarnpkg.com/@jscpd/tokenizer/-/tokenizer-3.3.24.tgz#2548c78f13987725716c919c66e0e3342e563c35"
-  integrity sha512-YzD4RSimSCe/BdC6EQemWBnnb71R474FPlAzsQvuN5bfq7arakm81ihc7tApofWi323gZNc/Pw11e3zslD+mFQ==
+"@jscpd/tokenizer@^3.4.5":
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/@jscpd/tokenizer/-/tokenizer-3.4.5.tgz#1465e9893177623c035d94dec4dbc710a250ee3f"
+  integrity sha512-yPamcj9V1a6h1AGEzdlyfa8t9Lxsb3sZ6Wr7m+cZw2sWD2AlCAjSzbgUwdla7d6y5g1jaVU2XGHEVNUx4vZUqw==
   dependencies:
-    "@jscpd/core" "^3.3.17"
+    "@jscpd/core" "^3.4.5"
     reprism "^0.0.11"
     spark-md5 "^3.0.1"
 
@@ -2509,7 +2509,7 @@ colorette@^1.2.2:
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.2.2.tgz#cbcc79d5e99caea2dbf10eb3a26fd8b3e6acfa94"
   integrity sha512-MKGMzyfeuutC/ZJ1cba9NqcNpfeqMUcYmyF1ZFY6/Cn7CNSAKx6a+s48sqLqyAiZuaP2TcqMhoo+dlwFnVxT9w==
 
-colors@^1.1.2, colors@^1.4.0:
+colors@1.4.0, colors@^1.1.2:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.4.0.tgz#c50491479d4c1bdaed2c9ced32cf7c7dc2360f78"
   integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
@@ -3450,15 +3450,15 @@ fs-capacitor@^6.2.0:
   resolved "https://registry.yarnpkg.com/fs-capacitor/-/fs-capacitor-6.2.0.tgz#fa79ac6576629163cb84561995602d8999afb7f5"
   integrity sha512-nKcE1UduoSKX27NSZlg879LdQc94OtbOsEmKMN2MBNudXREvijRKx2GEBsTMTfws+BrbkJoEuynbGSVRSpauvw==
 
-fs-extra@^9.0.0, fs-extra@^9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.0.1.tgz#910da0062437ba4c39fedd863f1675ccfefcb9fc"
-  integrity sha512-h2iAoN838FqAFJY2/qVpzFXy+EBxfVE220PalAqQLDVsFOHLJrZvut5puAbCdNv6WJk+B8ihI+k0c7JK5erwqQ==
+fs-extra@^9.0.0, fs-extra@^9.0.1, fs-extra@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
+  integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
   dependencies:
     at-least-node "^1.0.0"
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
-    universalify "^1.0.0"
+    universalify "^2.0.0"
 
 fs-minipass@^1.2.5:
   version "1.2.7"
@@ -4555,18 +4555,18 @@ jsbn@~0.1.0:
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
   integrity sha1-peZUwuWi3rXyAdls77yoDA7y9RM=
 
-jscpd@^3.3.26:
-  version "3.3.26"
-  resolved "https://registry.yarnpkg.com/jscpd/-/jscpd-3.3.26.tgz#45d6b17cb8a8046c844587e24974575ebc56a09a"
-  integrity sha512-Til3rI11zsNHdHhlzfk3PDVdAgDTf3KVOF2Qw9Z+6u8vnTOdF9fHY0SrUFYWqCpEjbOOO0ToJAUgWPwkG/YYeg==
+jscpd@^3.4.5:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/jscpd/-/jscpd-3.4.5.tgz#82f6b00644c31ee02a77920dc1bb29f792f65e98"
+  integrity sha512-2gAskcIpbnNTs0RgPZG72xBNa0eRR7mB121XApzbN7kkRUUue2ZT9ug7HMV1JZ01hIpJkrrchcDidMgnl6/DWA==
   dependencies:
-    "@jscpd/core" "^3.3.17"
-    "@jscpd/finder" "^3.3.26"
-    "@jscpd/html-reporter" "^3.3.26"
-    "@jscpd/tokenizer" "^3.3.24"
-    colors "^1.4.0"
+    "@jscpd/core" "^3.4.5"
+    "@jscpd/finder" "^3.4.5"
+    "@jscpd/html-reporter" "^3.4.5"
+    "@jscpd/tokenizer" "^3.4.5"
+    colors "1.4.0"
     commander "^5.0.0"
-    fs-extra "^9.0.0"
+    fs-extra "^9.1.0"
     gitignore-to-glob "^0.3.0"
 
 jsdom@^16.6.0:
@@ -6766,6 +6766,11 @@ universalify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-1.0.0.tgz#b61a1da173e8435b2fe3c67d29b9adf8594bd16d"
   integrity sha512-rb6X1W158d7pRQBg5gkR8uPaSfiids68LTJQYOtEUhoJUWBdaQHsuT/EUduxXYxcrt4r5PJ4fuHW1MHT6p0qug==
+
+universalify@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
+  integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
