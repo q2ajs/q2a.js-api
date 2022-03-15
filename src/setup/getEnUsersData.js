@@ -247,21 +247,25 @@ const getEnUsersData = async () => {
   ];
 };
 
-const generateNumber = async (min, max) => {
+const generateNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 const getDateAndTimeEnUsersData = async () => {
   let obj = {};
-  const askDateMoment = moment(new Date(+new Date(2022, 0, 1) - Math.floor(Math.random() * 100000000000)));
+  const askRandomDate = generateNumber(32, 120);
+  const askDateMoment = moment().subtract(askRandomDate, 'days');
   const askDate = askDateMoment.format();
-  const day = await generateNumber(1, 3);
-  const ans1DateMoment = askDateMoment.add(day, 'days');
+
+  const day = generateNumber(Math.floor(askRandomDate / 2), askRandomDate);
+  const ans1DateMoment = moment().subtract(day, 'days');
   const ans1Date = ans1DateMoment.format();
-  const day2 = await generateNumber(3, 30);
-  const ans2DateMoment = ans1DateMoment.add(day2, 'days');
+
+  const day2 = generateNumber(Math.floor(askRandomDate / 4), Math.floor(askRandomDate / 2));
+  const ans2DateMoment = moment().subtract(day2, 'days');
   const ans2Date = ans2DateMoment.format();
-  const month = await generateNumber(1, 12);
-  const ans3DateMoment = ans2DateMoment.add(day, 'days').add(month, 'months');
+
+  const day3 = generateNumber(0, Math.floor(askRandomDate / 4));
+  const ans3DateMoment = moment().subtract(day3, 'days');
   obj = {
     askDate: moment(askDate),
     ans1: moment(ans1Date),
