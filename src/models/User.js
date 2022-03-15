@@ -3,7 +3,10 @@ import Sequelize from 'sequelize';
 const { DataTypes } = Sequelize;
 
 export default {
-  publicName: Sequelize.STRING,
+  publicName: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
   profileImage: Sequelize.STRING,
   about: Sequelize.TEXT,
   theme: {

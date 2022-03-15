@@ -26,7 +26,7 @@ createDatabasePromise.then(async () => {
   const addDataToDb = (promises, datas, tableName) => {
     const newPromises = datas.map(async (data) => {
       const Model = await databaseUtils().loadModel(tableName);
-      Model.create(data);
+      return Model.create(data);
     });
     return newPromises.concat(promises);
   };

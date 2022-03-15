@@ -13,6 +13,7 @@ const databaseUtils = () => {
           host: config.host,
           port: config.port,
           dialect: 'mysql',
+          logging: false,
           pool: {
             max: 5,
             min: 0,

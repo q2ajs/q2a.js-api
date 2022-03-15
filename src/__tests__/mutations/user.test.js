@@ -16,7 +16,7 @@ describe('user mutation api (updateUser,..)', () => {
   const createUser = async () => {
     const { User } = global;
     const oldUser = await User.create({
-      publicName: 'test_name',
+      publicName: 'test_name2',
       profileImage: 'test_image.png',
       email: 'test@test.com',
       isEmailVerified: true,

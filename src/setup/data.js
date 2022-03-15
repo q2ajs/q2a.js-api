@@ -8,7 +8,7 @@ const getUsersData = async () => {
       profileImage: 'q2a_admin.png',
       about: 'Some descriptions about q2a_admin',
       theme: 'light',
-      role: ROLE.ADMIN,
+      role: ROLE.SUPER_ADMIN,
       score: 0,
       language: LANGUAGE.ENGLISH,
       email: process.env.SUPER_ADMIN_EMAIL,

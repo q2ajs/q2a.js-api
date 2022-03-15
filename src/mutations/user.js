@@ -21,7 +21,6 @@ const updateUser = async (_, { id, input }) => {
     theme: yup.mixed().oneOf([THEME.LIGHT, THEME.DARK]),
     language: yup.mixed().oneOf([LANGUAGE.PERSIAN, LANGUAGE.ENGLISH]),
   });
-
   const validationResult = await checkInputValidation(updateUserSchema, {
     profileImage: input.profileImage,
     about: input.about,
@@ -31,7 +30,6 @@ const updateUser = async (_, { id, input }) => {
   if (validationResult !== true) {
     return validationResult;
   }
-
   const User = await databaseUtils().loadModel(TABLES.USER_TABLE);
   await User.update(input, {
     where: { id },
