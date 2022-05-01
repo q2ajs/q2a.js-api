@@ -69,7 +69,6 @@ createDatabasePromise.then(async () => {
       tags: ['english', 'simple past'],
       createdAt: resultData.askDate,
     });
-
     const ans1 = source[i].Answer1;
     const ans2 = source[i].Answer2;
     const ans3 = source[i].Answer3;
@@ -111,4 +110,6 @@ createDatabasePromise.then(async () => {
     // eslint-disable-next-line no-undef,no-await-in-loop
     await updatePost(answerCount, postId, 'fa');
   }
+  const Statistics = databaseUtils().loadModel(TABLES.STATISTICS_TABLE);
+  await Statistics.create({ allQuestionsCount: source.length + 1, language: 'fa' });
 });
