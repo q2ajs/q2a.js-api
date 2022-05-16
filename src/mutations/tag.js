@@ -7,6 +7,7 @@ import {
   getQuestionsOrderBy,
   createInputErrorResponse,
   findTag,
+  findTagById,
 } from '../utility.js';
 import { LANGUAGE, TABLES } from '../constants.js';
 import databaseUtils from '../db/database.js';
@@ -46,14 +47,42 @@ const addTag = async (_, { language, title, content }, context) => {
   return createInputErrorResponse('Tag already exists.');
 };
 
-const updateTag = async (_, { language, id, title, content }) => {
+const updateTag = async (_, { language, id, title, content }, context) => {
   const validationResult = await checkInputValidation(tagSchema, { language, title, content });
   if (validationResult !== true) {
     return validationResult;
   }
   const Tag = databaseUtils().loadModel(TABLES.TAG_TABLE);
+  const POST = databaseUtils().loadModel(TABLES.POST_TABLE);
   const tag = await findTag(language, title);
+  const prevTag = await findTagById(language, id);
   if (tag === null) {
+    const questions = await getQuestionsOrderBy(language, prevTag.title, [['createdAt', 'DESC']], -1, -1);
+    if (questions != null) {
+      const promises = [];
+      for (let i = 0; i < questions.length; i += 1) {
+        const tags = [];
+        tags.push(
+          questions[i].dataValues.tag1,
+          questions[i].dataValues.tag2,
+          questions[i].dataValues.tag3,
+          questions[i].dataValues.tag4,
+          questions[i].dataValues.tag5
+        );
+        const questionTags = {};
+        tags.forEach((value, index) => {
+          if (value === prevTag.title) {
+            questionTags[`tag${index + 1}`] = title;
+          } else {
+            questionTags[`tag${index + 1}`] = value;
+          }
+        });
+        promises.push(
+          POST.update(questionTags, { where: { id: questions[i].dataValues.id, language } }, context)
+        );
+      }
+      await Promise.all(promises);
+    }
     await Tag.update(
       {
         title,
@@ -61,6 +90,7 @@ const updateTag = async (_, { language, id, title, content }) => {
       },
       { where: { id, language } }
     );
+
     return createSuccessResponse(`/tag/${encodeURIComponent(title)}`);
   }
   return createInputErrorResponse('This tag exists.');
