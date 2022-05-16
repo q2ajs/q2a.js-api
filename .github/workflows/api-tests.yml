@@ -17,8 +17,8 @@ jobs:
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Create ..env file
-        run: echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> ./..env
+      - name: Create .env file
+        run: echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> ./.env
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
