@@ -34,7 +34,7 @@ const questionData = {
   content:
     'How can I show date-time in a human-readable format in Alpine.js? I ' +
     'would add a filter in Vuejs to do the same and looking for a similar solution in Alpine.js.',
-  tags: ['next.js', 'vue'],
+  tags: ['next.js', 'react.js', 'vue'],
   language: LANGUAGE.ENGLISH,
 };
 const answerData = {

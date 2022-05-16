@@ -107,6 +107,25 @@ const findTag = async (language, title) => {
   });
 };
 
+const findTagById = async (language, id) => {
+  const Tag = await databaseUtils().loadModel(TABLES.TAG_TABLE);
+  return Tag.findOne({
+    where: {
+      language,
+      id,
+    },
+  });
+};
+
+const findPostById = async (language, id) => {
+  const POST = await databaseUtils().loadModel(TABLES.POST_TABLE);
+  return POST.findOne({
+    where: {
+      language,
+      id,
+    },
+  });
+};
 const getTypeTagWhereClause = (language, type, tag) => {
   if (tag) {
     return {
@@ -127,14 +146,19 @@ const getQuestionsOrderBy = async (language, tag, order, limit, offset, augmentW
   if (augmentWhereClause) {
     tagWhereClause = augmentWhereClause(tagWhereClause);
   }
-
-  return Post.findAll({
+  const findJson = {
     where: tagWhereClause,
     order,
     include: [User],
-    limit,
-    offset,
-  });
+  };
+  if (limit > -1) {
+    findJson.limit = limit;
+  }
+  if (offset > -1) {
+    findJson.offset = offset;
+  }
+
+  return Post.findAll(findJson);
 };
 export {
   checkInputValidation,
@@ -150,5 +174,7 @@ export {
   createAddSuccessResponse,
   updateStatistics,
   findTag,
+  findTagById,
   getQuestionsOrderBy,
+  findPostById,
 };
