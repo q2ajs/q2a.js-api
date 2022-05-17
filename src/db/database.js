@@ -14,7 +14,6 @@ const createDatabaseIfNotExist = (rawSQLConnection) => {
       rawSQLConnection.query(`CREATE DATABASE IF NOT EXISTS  ${config.database}`, (err2) => {
         if (err2) reject(err2);
         console.log('Database created');
-        rawSQLConnection.close();
         resolve();
       });
     });
