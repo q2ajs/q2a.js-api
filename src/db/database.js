@@ -8,7 +8,7 @@ const isInTestMode = process.env.JEST_WORKER_ID;
 
 const createDatabaseIfNotExist = (rawSQLConnection) => {
   return new Promise((resolve, reject) => {
-    rawSQLConnection.connect(err => {
+    rawSQLConnection.connect((err) => {
       if (err) reject(err);
       console.log('Connected!');
       rawSQLConnection.query(`CREATE DATABASE IF NOT EXISTS  ${config.database}`, (err2) => {
