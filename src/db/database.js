@@ -1,12 +1,38 @@
 import Sequelize from 'sequelize';
+import mysql from 'mysql';
 import config from './config.js';
 
 let db = null;
 const models = new Map();
 const isInTestMode = process.env.JEST_WORKER_ID;
 
+const createDatabaseIfNotExist = (rawSQLConnection) => {
+  return new Promise((resolve, reject) => {
+    rawSQLConnection.connect((err) => {
+      if (err) reject(err);
+      console.log('Connected!');
+      rawSQLConnection.query(`CREATE DATABASE IF NOT EXISTS  ${config.database}`, (err2) => {
+        if (err2) reject(err2);
+        console.log('Database created');
+        resolve();
+      });
+    });
+  });
+};
+
 const databaseUtils = () => {
   const makeDb = async () => {
+    if (!isInTestMode) {
+      const rawSQLConnection = mysql.createConnection({
+        host: config.host,
+        user: config.user,
+        password: config.password,
+        port: config.port,
+      });
+
+      await createDatabaseIfNotExist(rawSQLConnection);
+    }
+
     const sequelize = isInTestMode
       ? new Sequelize('sqlite::memory:', { logging: false })
       : new Sequelize(config.database, config.user, config.password, {
@@ -19,7 +45,7 @@ const databaseUtils = () => {
             idle: 10000,
           },
         });
-
+    //
     try {
       await sequelize.authenticate();
       // console.log('Connection established successfully.');
