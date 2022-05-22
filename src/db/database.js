@@ -23,7 +23,6 @@ const createDatabaseIfNotExist = (rawSQLConnection) => {
 const databaseUtils = () => {
   const makeDb = async () => {
     if (!isInTestMode) {
-      console.log('HERE ?');
       const rawSQLConnection = mysql.createConnection({
         host: config.host,
         user: config.user,
