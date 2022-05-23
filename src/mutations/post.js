@@ -93,7 +93,7 @@ const addQuestion = async (_, { language, title, content, tags }, context) => {
   );
   const newPost = resultOfPost.dataValues;
   await updateStatistics(language, 'allQuestionsCount');
-  return createAddSuccessResponse(newPost.id, `/${newPost.id}/${encodeURIComponent(title)}`);
+  return createAddSuccessResponse(newPost.id, `/questions/${newPost.id}/${encodeURIComponent(title)}`);
 };
 
 const addAnswer = async (_, { language, postId, content }, context) => {
@@ -213,7 +213,7 @@ const updateQuestion = async (_, { language, id, title, content, tags }) => {
     id,
     language
   );
-  return createSuccessResponse(`/${id}/${encodeURIComponent(title)}`);
+  return createSuccessResponse(`/questions/${id}/${encodeURIComponent(title)}`);
 };
 
 const increaseQuestionViewCount = async (_, { id }) => {
